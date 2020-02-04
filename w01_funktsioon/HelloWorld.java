@@ -1,7 +1,7 @@
 package w01_funktsioon;
 
 public class HelloWorld {
-    public static void main(String[] art) {
+    public static void main(String[] args) {
         System.out.print("Hello World");
 
         byte myByte = Byte.MIN_VALUE;
