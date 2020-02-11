@@ -5,11 +5,11 @@ package w02_klass;
  */
 public class Shop {
 
+    // Mina olen kõige laisem, ei ole minust laisemat
     private String[] supplies = new String[99];
 
     public Shop() {
 
-        
     }
 
     void addItem(String item) {
@@ -35,7 +35,9 @@ public class Shop {
     void getShopSupplies() {
 
         for (String item : supplies) {
-            System.out.println(item);
+            if (item != null) {
+                System.out.println(item);
+            }
         }
     }
 
