@@ -6,11 +6,10 @@ package w02_klass;
 public class Main {
 
     public static void main(String[] args) {
-        PersonalCode test = new PersonalCode();
-        test.setCode("44");
-        System.out.println(test.getCode());
-        System.out.println(test.gender());
+        Character sten = new Character("Sten", CharacterType.WIZARD);
+        
+        System.out.println(sten);
 
-        System.out.println(test.getAge());
     }
+
 }
