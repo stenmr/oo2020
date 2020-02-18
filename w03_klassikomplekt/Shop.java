@@ -1,5 +1,4 @@
-package w02_klass;
-
+package w03_klassikomplekt;
 /**
  * Shop
  */
