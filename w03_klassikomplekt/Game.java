@@ -1,5 +1,6 @@
 package w03_klassikomplekt;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -8,29 +9,26 @@ import java.util.Scanner;
 public class Game {
 
     public static void main(String[] args) {
-        Character sten = new Character("Sten", CharacterType.WIZARD);
-        Character enemy = new Character("Sipsik", CharacterType.GOBLIN);
 
-        String[] items = {
-            "Sword",
-            "Bow",
-            "Staff",
-            "Apple",
-            "Helmet"
-        };
-        
-        sten.move();
-        sten.move();
-        sten.move();
-        sten.move();
+        World world = new World(20, 10);
 
-        System.out.println(sten);
+        Character player = new Character("Sten", CharacterType.PLAYER, "X");
+        Character enemy = new Character(5, 5, "Sipsik", CharacterType.MONSTER, "E");
+        Character friend = new Character(3, 8, "Semu", CharacterType.NPC, "F");
 
-        Shop shop = new Shop();
+        world.addCharacters(Arrays.asList(enemy, friend, player));
 
-        for (String item : items) {
-            shop.addItem(item);
-        }
+        String[] items = { "Sword", "Bow", "Staff", "Apple", "Helmet" };
+
+        System.out.println(player);
+
+        world.render();
+
+        // Shop shop = new Shop();
+
+        /*
+         * for (String item : items) { shop.addItem(item); }
+         */
 
         Scanner scanner = new Scanner(System.in);
 
@@ -42,22 +40,20 @@ public class Game {
             input = scanner.nextLine();
 
             if (input.equals("w")) {
-                sten.changeDirection(Direction.UP);
-                sten.move();
+                player.changeDirection(Direction.UP);
             } else if (input.equals("s")) {
-                sten.changeDirection(Direction.DOWN);
-                sten.move();
+                player.changeDirection(Direction.DOWN);
             } else if (input.equals("a")) {
-                sten.changeDirection(Direction.LEFT);
-                sten.move();
+                player.changeDirection(Direction.LEFT);
             } else if (input.equals("d")) {
-                sten.changeDirection(Direction.RIGHT);
-                sten.move();
+                player.changeDirection(Direction.RIGHT);
             }
 
-            if (sten.x == enemy.x && sten.y == enemy.y) {
-                System.out.println("Vastane!");         
+            if (player.x == friend.x && player.y == friend.y) {
+                enemy.isVisible = !enemy.isVisible;
             }
+
+            world.render();
         }
     }
 

@@ -61,7 +61,7 @@ public class Test {
                         }
                     }
                 }
-            
+
                 if (prev != 0) {
                     for (char c : vowels) {
                         if (c == prev) {
@@ -87,7 +87,7 @@ public class Test {
                     randomNumber = r.nextInt(consonants.length);
                 }
 
-                word[j] = choice ? vowels[randomNumber] : consonants[randomNumber];                
+                word[j] = choice ? vowels[randomNumber] : consonants[randomNumber];
             }
 
             set.add(String.copyValueOf(word));
