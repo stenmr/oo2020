@@ -7,5 +7,5 @@ import java.util.List;
  * Inventory
  */
 public class Inventory {
-    List<Item> inventory = new ArrayList<>();
+    // List<Item> inventory = new ArrayList<>();
 }
