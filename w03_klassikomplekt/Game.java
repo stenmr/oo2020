@@ -1,6 +1,7 @@
 package w03_klassikomplekt;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -12,23 +13,33 @@ public class Game {
 
         World world = new World(20, 10);
 
-        Character player = new Character("Sten", CharacterType.PLAYER, "X");
-        Character enemy = new Character(5, 5, "Sipsik", CharacterType.MONSTER, "E");
+        Random r = new Random();
+
+        Character player = new Character("Sten", CharacterType.PLAYER, "X", new Inventory(8));
+        Character enemy = new Character(5, 5, "Paha Sipsik", CharacterType.MONSTER, "E");
         Character friend = new Character(3, 8, "Semu", CharacterType.NPC, "F");
 
-        world.addCharacters(Arrays.asList(enemy, friend, player));
+        Item[] itemList = new Item[5];
+        itemList[0] = new Item("Saabas", ItemType.MISC, 1.5);
+        itemList[1] = new Item("Apple", ItemType.CONSUMABLE, 0.8);
+        itemList[2] = new Item("Sword", ItemType.WEAPON, 4.5);
+        itemList[3] = new Item("Helmet", ItemType.ARMOR, 3.0);
+        itemList[4] = new Item("Banana", ItemType.CONSUMABLE, 0.8);
 
-        String[] items = { "Sword", "Bow", "Staff", "Apple", "Helmet" };
+        world.addCharacters(Arrays.asList(enemy, friend, player));
+        System.out.println(itemList[0]);
+        for (int i = 0; i < 5; i++) {
+
+            int x = r.nextInt(20);
+            int y = r.nextInt(10);
+
+            world.addItem(itemList[0], x, y);
+        }
+        
 
         System.out.println(player);
 
         world.render();
-
-        // Shop shop = new Shop();
-
-        /*
-         * for (String item : items) { shop.addItem(item); }
-         */
 
         Scanner scanner = new Scanner(System.in);
 

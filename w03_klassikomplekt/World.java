@@ -1,6 +1,8 @@
 package w03_klassikomplekt;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * World
@@ -9,6 +11,7 @@ public class World {
 
     private int width, height;
     List<Character> characters;
+    List<ItemWithLocation> items;
 
     public World(int width, int height) {
         this.width = width;
@@ -17,6 +20,15 @@ public class World {
 
     void addCharacters(List<Character> c) {
         this.characters = c;
+    }
+
+    void addItem(Item item, int x, int y) {
+
+        if (x > width || y > height || x < 0 || y < 0) {
+            System.out.println("Item-i koordinaadid on world-ist väljas");
+        } else {
+            items.add(new ItemWithLocation(item, x, y));
+        }
     }
 
     void render() {
@@ -37,6 +49,12 @@ public class World {
                 for (Character c : characters) {
                     if (c.isVisible && c.x == x && c.y == y) {
                         symbol = c.getSymbol();
+                    }
+                }
+
+                for (ItemWithLocation item : items) {
+                    if (item.x == x && item.y == y) {
+                        symbol = item.getSymbol();
                     }
                 }
 

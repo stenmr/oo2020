@@ -15,7 +15,7 @@ public class Character {
 
     private String symbol = "?";
 
-    public Character(String name, CharacterType characterType, String symbol) {
+    public Character(String name, CharacterType characterType, String symbol, Inventory inventory) {
         this.name = name;
         this.characterType = characterType;
         this.direction = Direction.RIGHT;

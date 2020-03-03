@@ -25,7 +25,6 @@ public class Chars {
                     }
 
                     dict.put(Character.valueOf(ch), Integer.valueOf(count));
-                    break;
                 }
             }
         }

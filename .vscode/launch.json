@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloWorld<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w01_funktsioon.HelloWorld",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MultiplicationTable<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w01_funktsioon.MultiplicationTable",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PersonalCode<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w02_klass.PersonalCode",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Game<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w03_klassikomplekt.Game",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w03_klassikomplekt.Test",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Amazon<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w04.Amazon",
+            "projectName": "oo2020_e19cce18"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Chars<oo2020_e19cce18>",
+            "request": "launch",
+            "mainClass": "w04.Chars",
+            "projectName": "oo2020_e19cce18"
+        }
+    ]
+}
