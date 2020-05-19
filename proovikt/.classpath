@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
+	<classpathentry kind="src" path="src" output="bin/app"/>
+	<classpathentry kind="src" path="test" output="bin/test">
+		<attributes>
+			<attribute name="test" value="true"/>
+		</attributes>
+  	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+		<classpathentry
+			kind="lib"
+			path="lib/junit-4.13.jar"
+			exported="true" />
+					<classpathentry
+			kind="lib"
+			path="lib/hamcrest-2.2.jar"
+			exported="true" />
+
+</classpath>
+
